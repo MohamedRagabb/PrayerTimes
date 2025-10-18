@@ -1,89 +1,111 @@
 body {
-  background: linear-gradient(45deg, #240165, #05001c);
-  direction: rtl;
-  font-family: "Tajawal", sans-serif;
+    margin: 0;
+    background: linear-gradient(45deg, #240165, #05001c);
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    direction: rtl;
 }
 
-#namedate-con {
-  margin-top: 10px;
-}
-
-#name-con {
-  color: white;
-  margin-right: 40px;
+.container {
+    padding: 20px;
+    text-align: center;
 }
 
 #city-name {
-  font-size: 100px;
-  color: white;
-  font-weight: 400;
+    font-size: 60px;
+    margin: 10px 0;
 }
 
 #city-date {
-  font-size: 20px;
-  font-weight: 200;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+    font-size: 20px;
+    color: #ccc;
 }
 
 hr {
-  margin: 10px 50px;
-  border-color: bisque;
+    border: 1px solid #888;
+    margin: 20px 0;
 }
 
-.parnt-card {
-  margin-top: 40px;
-  height: 200px;
-  display: flex;
-  justify-content: space-around;
+.parent-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
-  width: 12%;
-  height: 95%;
-  background-color: white;
-  font-size: 20px;
-  box-shadow: 0px 10px 5px rgb(0 0 0 / 30%);
+    width: 150px;
+    background-color: white;
+    color: #000;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .header {
-  background: linear-gradient(45deg, #5709ee, #7a37bf);
-  color: white;
+    background: linear-gradient(45deg, #5709ee, #7a37bf);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
 }
 
-.header h1 {
-  font-weight: 200;
-  padding: 5px;
-}
-
-.center {
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.body {
+    padding: 20px;
 }
 
 .time {
-  font-size: 50px;
+    font-size: 35px;
+    font-weight: 700;
 }
 
+/* Dropdown */
 .select-div {
-  margin-top: 100px;
+    margin-top: 40px;
 }
 
 .change {
-  width: 300px;
-  height: 35px;
-  font-size: 25px;
-  font-family: "Tajawal", sans-serif;
-  background: none;
-  color: white;
-  border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    font-family: "Tajawal", sans-serif;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: #fff;
+    background-color: #5709ee;
 }
 
-option {
-  background: none;
-  color: #37bf94;
+/* 📱 Responsive design */
+@media (max-width: 900px) {
+    #city-name {
+        font-size: 45px;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .time {
+        font-size: 30px;
+    }
+
+    #city-name {
+        font-size: 35px;
+    }
 }
